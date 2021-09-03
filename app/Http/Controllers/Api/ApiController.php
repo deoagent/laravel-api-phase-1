@@ -40,7 +40,13 @@ class ApiController extends Controller
 
     //LIST API -GET
     public function listEmployees(){
+        $employees = Employee::get();
 
+        return response() -> json([
+            "status" => 1,
+            "message" => "Listing Employees",
+            "data" => $employees
+        ], 200);
     }
 
     //SINGLE DETAIL API _GET
