@@ -20,6 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 //API PHASE 1
 Route::get("list-employees", [ApiController::class, "listEmployees"]);
-Route::get("single-employees", [ApiController::class, "getSingleEmployee"]);
+Route::get("single-employee/{id}", [ApiController::class, "getSingleEmployee"]);
 Route::post("add-employees", [ApiController::class, "createEmployee"]);
 Route::put("update-employees/{id}", [ApiController::class, "updateEmployee"]);
