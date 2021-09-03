@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Api\ApiController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//API PHASE 1
+Route::get("list-employees", [ApiController::class, "listEmployees"]);
+Route::get("single-employees", [ApiController::class, "getSingleEmployee"]);
+Route::post("add-employees", [ApiController::class, "createEmployee"]);
+Route::put("update-employees/{id}", [ApiController::class, "updateEmployee"]);

@@ -7,27 +7,27 @@ use Illuminate\Http\Request;
 
 class ApiController extends Controller
 {
-    //CREATE API
+    //CREATE API -POST
     public function createEmployee(Request $request){
 
     }
 
-    //LIST API
+    //LIST API -GET
     public function listEmployees(){
 
     }
 
-    //SINGLE DETAIL API
+    //SINGLE DETAIL API _GET
     public function getSingleEmployee($id){
 
     }
 
-    //UPDATE API
+    //UPDATE API -PUT
     public function updateEmployee(Request $request, $id){
 
     }
 
-    //DELETE API
+    //DELETE API -DELETE
     public function deleteEmployee($id){
 
     }
